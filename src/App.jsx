@@ -1,7 +1,7 @@
 
 import { useState } from 'react'
 import QRCode from 'qrcode'
-import { inject } from '@vercel/analytics';
+
 
 function App() {
   const[url ,setUrl]=useState('')
@@ -36,5 +36,5 @@ const GenerateQR =()=>{
   )
   
 }
-inject();
+
 export default App
