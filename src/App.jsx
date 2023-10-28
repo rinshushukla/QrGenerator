@@ -8,7 +8,11 @@ function App() {
   const[qrcode, setQrcode]=useState('')
 
 const GenerateQR =()=>{
-  QRCode.toDataURL(url,(err,url)=>{
+  QRCode.toDataURL(url,{
+    width:800,
+    margin:2
+
+  },(err,url)=>{
     if(err) throw err;
 
     console.log(url)
@@ -19,7 +23,7 @@ const GenerateQR =()=>{
 
   return (
     <div className='app'>
-      <h1>Qr Code Generator </h1>
+      <h1>Qr Generator </h1>
       <input type="text"
       placeholder="Enter Text Here "
       value={url}
