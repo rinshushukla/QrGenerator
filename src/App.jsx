@@ -1,7 +1,7 @@
 
 import { useState } from 'react'
 import QRCode from 'qrcode'
-
+import { Analytics } from '@vercel/analytics/react'
 
 function App() {
   const[url ,setUrl]=useState('')
@@ -34,6 +34,7 @@ const GenerateQR =()=>{
       
         <img src={qrcode} />
         <a href={qrcode} download={url}>Download</a>
+        <Analytics/>
       </>
       }
     </div>
